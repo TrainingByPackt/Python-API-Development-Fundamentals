@@ -18,7 +18,7 @@ from schemas.user import UserSchema
 from utils import generate_token, verify_token
 
 user_schema = UserSchema()
-user_public_schema = UserSchema(only=('id', 'username'))
+user_public_schema = UserSchema(exclude=('email', ))
 recipe_list_schema = RecipeSchema(many=True)
 
 mailgun = MailgunApi(domain=os.environ['MAILGUN_DOMAIN'],
@@ -71,7 +71,7 @@ class UserResource(Resource):
         user = User.get_by_username(username=username)
 
         if user is None:
-            return {'message': 'user not found'}, HTTPStatus.NOT_FOUND
+            return {'message': 'User not found'}, HTTPStatus.NOT_FOUND
 
         current_user = get_jwt_identity()
 

@@ -47,7 +47,7 @@ class UserResource(Resource):
         user = User.get_by_username(username=username)
 
         if user is None:
-            return {'message': 'user not found'}, HTTPStatus.NOT_FOUND
+            return {'message': 'User not found'}, HTTPStatus.NOT_FOUND
 
         current_user = get_jwt_identity()
 

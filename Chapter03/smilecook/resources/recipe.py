@@ -24,7 +24,7 @@ class RecipeListResource(Resource):
                         description=data['description'],
                         num_of_servings=data['num_of_servings'],
                         cook_time=data['cook_time'],
-                        direction=data['direction'])
+                        directions=data['directions'])
 
         recipe_list.append(recipe)
 

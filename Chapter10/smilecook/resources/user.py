@@ -87,6 +87,15 @@ class UserResource(Resource):
         return data, HTTPStatus.OK
 
 
+class MeResource(Resource):
+
+    @jwt_required
+    def get(self):
+        user = User.get_by_id(id=get_jwt_identity())
+
+        return user_schema.dump(user).data, HTTPStatus.OK
+
+
 class UserRecipeListResource(Resource):
 
     @jwt_optional

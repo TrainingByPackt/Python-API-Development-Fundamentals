@@ -1,6 +1,6 @@
 from flask import request
 from flask_restful import Resource
-from flask_jwt_extended import jwt_optional, get_jwt_identity
+from flask_jwt_extended import jwt_optional, get_jwt_identity, jwt_required
 from http import HTTPStatus
 
 from webargs import fields
@@ -81,3 +81,12 @@ class UserRecipeListResource(Resource):
         recipes = Recipe.get_all_by_user(user_id=user.id, visibility=visibility)
 
         return recipe_list_schema.dump(recipes).data, HTTPStatus.OK
+
+
+class MeResource(Resource):
+
+    @jwt_required
+    def get(self):
+        user = User.get_by_id(id=get_jwt_identity())
+
+        return user_schema.dump(user).data, HTTPStatus.OK

@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 
-from Chapter03.smilecook.resources.recipe import RecipeListResource, RecipeResource, RecipePublishResource
+from resources.recipe import RecipeListResource, RecipeResource, RecipePublishResource
 
 app = Flask(__name__)
 

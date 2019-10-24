@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_migrate import Migrate
 from flask_restful import Api
 from flask_uploads import configure_uploads, patch_request_class

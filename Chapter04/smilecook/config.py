@@ -5,7 +5,8 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://your_name:your_password@localhost:5433/smilecook'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    JWT_SECRET_KEY = 'super-secret-key'
+    SECRET_KEY = 'super-secret-key'
+
     JWT_ERROR_MESSAGE_KEY = 'message'
 
     JWT_BLACKLIST_ENABLED = True

@@ -105,6 +105,7 @@ class RecipeResource(Resource):
         recipe.description = data.get('description') or recipe.description
         recipe.num_of_servings = data.get('num_of_servings') or recipe.num_of_servings
         recipe.cook_time = data.get('cook_time') or recipe.cook_time
+        recipe.ingredients = data.get('ingredients') or recipe.ingredients
         recipe.directions = data.get('directions') or recipe.directions
 
         recipe.save()
@@ -127,6 +128,8 @@ class RecipeResource(Resource):
             return {'message': 'Access is not allowed'}, HTTPStatus.FORBIDDEN
 
         recipe.delete()
+
+        clear_cache('/recipes')
 
         return {}, HTTPStatus.NO_CONTENT
 

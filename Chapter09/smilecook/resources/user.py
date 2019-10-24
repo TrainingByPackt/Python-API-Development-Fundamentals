@@ -8,7 +8,7 @@ from http import HTTPStatus
 from webargs import fields, validate
 from webargs.flaskparser import use_kwargs
 
-from extensions import image_set
+from extensions import image_set, limiter
 from mailgun import MailgunApi
 from models.recipe import Recipe
 from models.user import User
@@ -97,6 +97,7 @@ class MeResource(Resource):
 
 
 class UserRecipeListResource(Resource):
+    decorators = [limiter.limit('3/minute;30/hour;300/day', methods=['GET'], error_message='Too Many Requests')]
 
     @jwt_optional
     @use_kwargs({'page': fields.Int(missing=1),

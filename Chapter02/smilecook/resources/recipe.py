@@ -2,7 +2,7 @@ from flask import request
 from flask_restful import Resource
 from http import HTTPStatus
 
-from Chapter03.smilecook.models import Recipe, recipe_list
+from models import Recipe, recipe_list
 
 
 class RecipeListResource(Resource):

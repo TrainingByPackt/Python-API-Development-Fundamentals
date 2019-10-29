@@ -50,7 +50,7 @@ class RefreshResource(Resource):
 class RevokeResource(Resource):
 
     @jwt_required
-    def delete(self):
+    def post(self):
         jti = get_raw_jwt()['jti']
 
         black_list.add(jti)

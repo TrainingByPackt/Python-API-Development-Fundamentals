@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "636a5ed7-ab55-49fd-81cc-2d187937e176",
-		"name": "SmileCook4",
+		"_postman_id": "b7c783a7-79e9-46bc-bc34-745d37149708",
+		"name": "SmileCook",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -161,7 +161,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "User",
@@ -223,7 +224,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Token",
@@ -286,11 +288,11 @@
 				{
 					"name": "Revoke",
 					"request": {
-						"method": "DELETE",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjgxODU4MTYsIm5iZiI6MTU2ODE4NTgxNiwianRpIjoiZmU1OTUwMDgtYWNhMi00ZmJkLWE1ZjgtZmI2ZmZkYmQ0ZWQ3IiwiZXhwIjoxNTY4MTg2NzE2LCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.6B_QB8Q2eDJgm3EIgtYWoHbZe9nKHgn4Zo5AdCY8qrk",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzIzNDg1MjEsIm5iZiI6MTU3MjM0ODUyMSwianRpIjoiZjVjNGQxNmEtZTYwNC00ODUwLWI5N2QtNzE5NWEyNDMwYjZiIiwiZXhwIjoxNTcyMzQ5NDIxLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.QmLjwGhpWIYq_nBgLZq_u2GXoP9ZUR0bJ3RiN9fiq_k",
 								"type": "text"
 							}
 						],
@@ -308,7 +310,9 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }

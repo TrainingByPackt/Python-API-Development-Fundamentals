@@ -1,0 +1,2 @@
+http DELETE localhost:5000/recipes/1
+curl -i -X DELETE localhost:5000/recipes/1

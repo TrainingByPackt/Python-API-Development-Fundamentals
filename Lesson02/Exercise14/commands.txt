@@ -1,0 +1,5 @@
+http PUT localhost:5000/recipes/1/publish
+curl -i -X PUT localhost:5000/recipes/1/publish
+
+http GET localhost:5000/recipes
+curl -i -X GET localhost:5000/recipes

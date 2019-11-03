@@ -1,0 +1,2 @@
+http PUT localhost:5000/recipes/1 name="Lovely Cheese Pizza" description="This is a lovely cheese pizza recipe" num_of_servings:=3 cook_time:=60 directions="This is how you make it"
+curl -i -X PUT localhost:5000/recipes/1 -H "Content-Type: application/json" -d '{"name":"Lovely Cheese Pizza", "description":"This is a lovely cheese pizza recipe", "num_of_servings":3, "cook_time":60, "directions":"This is how you make it"}'

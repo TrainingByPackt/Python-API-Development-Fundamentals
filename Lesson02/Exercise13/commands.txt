@@ -1,0 +1,2 @@
+http GET localhost:5000/recipes
+curl -i -X GET localhost:5000/recipes

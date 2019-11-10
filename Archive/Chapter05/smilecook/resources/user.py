@@ -4,7 +4,7 @@ from flask_jwt_extended import jwt_optional, get_jwt_identity, jwt_required
 from http import HTTPStatus
 
 from webargs import fields
-from webargs.flaskparser import use_kwargs, use_args
+from webargs.flaskparser import use_kwargs
 
 from models.recipe import Recipe
 from models.user import User
@@ -25,7 +25,7 @@ class UserListResource(Resource):
         data, errors = user_schema.load(data=json_data)
 
         if errors:
-            return {'message': "Validation errors", 'errors': errors}, HTTPStatus.BAD_REQUEST
+            return {'message': 'Validation errors', 'errors': errors}, HTTPStatus.BAD_REQUEST
 
         if User.get_by_username(data.get('username')):
             return {'message': 'username already used'}, HTTPStatus.BAD_REQUEST
@@ -63,7 +63,7 @@ class UserResource(Resource):
 class UserRecipeListResource(Resource):
 
     @jwt_optional
-    @use_kwargs({"visibility": fields.Str(missing='public')})
+    @use_kwargs({'visibility': fields.Str(missing='public')})
     def get(self, username, visibility):
 
         user = User.get_by_username(username=username)

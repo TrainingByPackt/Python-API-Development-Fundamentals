@@ -101,7 +101,7 @@ class UserRecipeListResource(Resource):
     @jwt_optional
     @use_kwargs({'page': fields.Int(missing=1),
                  'per_page': fields.Int(missing=10),
-                 "visibility": fields.Str(missing='public')})
+                 'visibility': fields.Str(missing='public')})
     def get(self, username, page, per_page, visibility):
 
         user = User.get_by_username(username=username)

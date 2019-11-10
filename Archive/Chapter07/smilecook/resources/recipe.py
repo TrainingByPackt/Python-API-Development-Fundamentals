@@ -153,7 +153,7 @@ class RecipeCoverUploadResource(Resource):
     @jwt_required
     def put(self, recipe_id):
 
-        file = request.files.get("cover")
+        file = request.files.get('cover')
 
         if not file:
             return {'message': 'Not a valid image'}, HTTPStatus.BAD_REQUEST

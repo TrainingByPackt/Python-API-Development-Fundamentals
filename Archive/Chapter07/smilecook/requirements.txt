@@ -10,4 +10,4 @@ marshmallow==2.19.5
 webargs==5.4.0
 itsdangerous==1.1.0
 Flask-Uploads==0.2.1
-Pillow==6.1.0
+Pillow==6.2.1

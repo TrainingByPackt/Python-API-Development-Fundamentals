@@ -30,7 +30,7 @@ class RecipeListResource(Resource):
         data, errors = recipe_schema.load(data=json_data)
 
         if errors:
-            return {'message': "Validation errors", 'errors': errors}, HTTPStatus.BAD_REQUEST
+            return {'message': 'Validation errors', 'errors': errors}, HTTPStatus.BAD_REQUEST
 
         recipe = Recipe(**data)
         recipe.user_id = current_user
@@ -64,7 +64,7 @@ class RecipeResource(Resource):
         data, errors = recipe_schema.load(data=json_data, partial=('name',))
 
         if errors:
-            return {'message': "Validation errors", 'errors': errors}, HTTPStatus.BAD_REQUEST
+            return {'message': 'Validation errors', 'errors': errors}, HTTPStatus.BAD_REQUEST
 
         recipe = Recipe.get_by_id(recipe_id=recipe_id)
 

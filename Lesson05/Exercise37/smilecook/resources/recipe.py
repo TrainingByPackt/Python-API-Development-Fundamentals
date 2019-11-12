@@ -49,10 +49,10 @@ class RecipeResource(Resource):
 
         current_user = get_jwt_identity()
 
-        if recipe.is_publish is False and recipe.user_id != current_user:
+        if recipe.is_publish == False and recipe.user_id != current_user:
             return {'message': 'Access is not allowed'}, HTTPStatus.FORBIDDEN
 
-        return recipe_schema.dump(recipe).data, HTTPStatus.OK
+        return recipe.data(), HTTPStatus.OK
 
     @jwt_required
     def patch(self, recipe_id):

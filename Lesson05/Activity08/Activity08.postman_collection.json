@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "6c76703c-14c0-4f5b-b25a-f3a51a9dea16",
+		"name": "SmileCook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "RecipeList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NDc5NzcsIm5iZiI6MTU3MzU0Nzk3NywianRpIjoiMTkwMDc2ODItNDFiYy00NGI0LWI1NjktM2M4MGJjZWE1ZGQwIiwiZXhwIjoxNTczNTQ4ODc3LCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.LoK3b63GihYQp3A3-zKw4-yEMOqQxmjm-kDfYe0plkU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"Blueberry Smoothie\", \n    \"description\": \"This is a lovely Blueberry Smoothie\",\n    \"num_of_servings\": 2,\n    \"cook_time\": 10,\n    \"directions\": \"This is how you make it\"\n} "
+						},
+						"url": {
+							"raw": "http://localhost:5000/recipes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecipeList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/recipes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecipePublish",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NDc5NzcsIm5iZiI6MTU3MzU0Nzk3NywianRpIjoiMTkwMDc2ODItNDFiYy00NGI0LWI1NjktM2M4MGJjZWE1ZGQwIiwiZXhwIjoxNTczNTQ4ODc3LCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.LoK3b63GihYQp3A3-zKw4-yEMOqQxmjm-kDfYe0plkU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/recipes/4/publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes",
+								"4",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NDc5NzcsIm5iZiI6MTU3MzU0Nzk3NywianRpIjoiMTkwMDc2ODItNDFiYy00NGI0LWI1NjktM2M4MGJjZWE1ZGQwIiwiZXhwIjoxNTczNTQ4ODc3LCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.LoK3b63GihYQp3A3-zKw4-yEMOqQxmjm-kDfYe0plkU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"num_of_servings\": 4, \n    \"cook_time\": 20 \n} "
+						},
+						"url": {
+							"raw": "http://localhost:5000/recipes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMzNTg3NTksIm5iZiI6MTU3MzM1ODc1OSwianRpIjoiNTgwZjQ2MTUtYzUxNS00MTQ2LWI1ZjgtODZjY2EwNWZkNThiIiwiZXhwIjoxNTczMzU5NjU5LCJpZGVudGl0eSI6MywiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.SkdoOhyBYmBtZAD5sHTMzDSubSt5LVbs1lD-nPtL1pQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/recipes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/recipes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"username\": \"james\", \n    \"email\": \"james@gmail.com\", \n    \"password\": \"WkQad19\" \n} "
+						},
+						"url": {
+							"raw": "http://localhost:5000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjgxODU4MTYsIm5iZiI6MTU2ODE4NTgxNiwianRpIjoiZmU1OTUwMDgtYWNhMi00ZmJkLWE1ZjgtZmI2ZmZkYmQ0ZWQ3IiwiZXhwIjoxNTY4MTg2NzE2LCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.6B_QB8Q2eDJgm3EIgtYWoHbZe9nKHgn4Zo5AdCY8qrk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/users/james",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"james"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"warning": "Key contains invalid whitespace characters.",
+								"key": "Authorization ",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMzNTY4ODIsIm5iZiI6MTU3MzM1Njg4MiwianRpIjoiMjZiYzg2ZGMtMTYzNy00MWU3LTk0YzItNDg2MTM3ZWM1N2NiIiwiZXhwIjoxNTczMzU3NzgyLCJpZGVudGl0eSI6MywiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.HYMmZMyDSoGh_m5UGCugicLPfhO8jIl_LtY7a-PPgrA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserRecipeList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NDkyODAsIm5iZiI6MTU3MzU0OTI4MCwianRpIjoiOWNmNzU5OWItNjJmZS00MTkyLThmM2ItNmUyYmRjZDEwYzE2IiwiZXhwIjoxNTczNTUwMTgwLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ._Dcrg7wyGUGxsHHagDwZLyPinZ1zSPU52QKJ-0gnu0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/users/james/recipes?visibility=all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"james",
+								"recipes"
+							],
+							"query": [
+								{
+									"key": "visibility",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"email\": \"james@gmail.com\", \n    \"password\": \"WkQad19\" \n} "
+						},
+						"url": {
+							"raw": "http://localhost:5000/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjgxODY0MzQsIm5iZiI6MTU2ODE4NjQzNCwianRpIjoiZThlMGM2OTgtYjY5OS00MTg0LWFiYzItMThjMTdkYjA4NmNkIiwiZXhwIjoxNTcwNzc4NDM0LCJpZGVudGl0eSI6MywidHlwZSI6InJlZnJlc2gifQ.XIXEex13Er28h2SNeQSAwb2ubGVxd7au-JLxjX_tXpk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMzNzIwNDIsIm5iZiI6MTU3MzM3MjA0MiwianRpIjoiNzBmOGUwOTYtOWQ4MS00OTAxLTgwMGMtOGNmNTIyODllZDg5IiwiZXhwIjoxNTczMzcyOTQyLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.Q7POtXfelopK4Q060GCVH26Hb_kDynj_TBwBxncf_-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/revoke",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

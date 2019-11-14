@@ -1,0 +1,8 @@
+from mailgun import MailgunApi
+
+mailgun = MailgunApi(domain='your_domain.mailgun.org',
+                     api_key='your_mailgun_api_key')
+
+mailgun.send_email(to='smilecook.api@gmail.com',
+                   subject='Hello',
+                   text='Testing some Mailgun awesomeness!')

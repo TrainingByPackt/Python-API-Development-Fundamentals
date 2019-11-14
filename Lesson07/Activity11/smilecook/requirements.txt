@@ -1,0 +1,13 @@
+Flask==1.0.3
+Flask-RESTful==0.3.7
+httpie==1.0.3
+Flask-SQLAlchemy==2.4.0
+Flask-Migrate==2.5.2
+psycopg2-binary==2.8.3
+passlib==1.7.1
+Flask-JWT-Extended==3.20.0
+marshmallow==2.19.5
+webargs==5.4.0
+itsdangerous==1.1.0
+Flask-Uploads==0.2.1
+Pillow==6.2.1

@@ -20,10 +20,10 @@ class TokenResource(Resource):
 
     def post(self):
 
-        data = request.get_json()
+        json_data = request.get_json()
 
-        email = data.get('email')
-        password = data.get('password')
+        email = json_data.get('email')
+        password = json_data.get('password')
 
         user = User.get_by_email(email=email)
 

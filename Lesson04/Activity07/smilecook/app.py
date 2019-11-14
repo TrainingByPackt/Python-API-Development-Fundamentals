@@ -22,7 +22,6 @@ def create_app():
 
 
 def register_extensions(app):
-
     db.init_app(app)
     migrate = Migrate(app, db)
     jwt.init_app(app)

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "878bb4ab-93f8-4655-993b-d5272e1fec4d",
+		"_postman_id": "0b398364-c252-4a49-950f-84838539a91c",
 		"name": "SmileCook",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -161,6 +161,33 @@
 							"path": [
 								"recipes",
 								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecipePublish",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NTE5MTMsIm5iZiI6MTU3MzU1MTkxMywianRpIjoiYzlhMDlmMjctNWE0MC00OTc4LTljODUtMDE2M2I2MDQ4MDBkIiwiZXhwIjoxNTczNTUyODEzLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.nfsXrpamdGRqLPXlJbhvZY_n8JicbTmcClsUvf6Lc1w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/recipes/3/publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"recipes",
+								"3",
+								"publish"
 							]
 						}
 					},

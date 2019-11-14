@@ -19,7 +19,6 @@ recipe_list_schema = RecipeSchema(many=True)
 
 class UserListResource(Resource):
     def post(self):
-        json_data = request.get_json()
 
         json_data = request.get_json()
 

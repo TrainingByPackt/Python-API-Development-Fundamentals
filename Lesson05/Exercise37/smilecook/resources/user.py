@@ -14,7 +14,6 @@ user_public_schema = UserSchema(exclude=('email', ))
 
 class UserListResource(Resource):
     def post(self):
-        json_data = request.get_json()
 
         json_data = request.get_json()
 

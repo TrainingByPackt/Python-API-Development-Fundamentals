@@ -1,0 +1,8 @@
+heroku login
+
+git init
+heroku git:remote -a your_heroku_app_name
+
+git add .
+git commit -am "make it better"
+git push heroku master

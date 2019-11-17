@@ -27,12 +27,6 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://your_name:your_password@localhost:5432/smilecook'
 
 
-class StagingConfig(Config):
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
-
-
 class ProductionConfig(Config):
 
     SECRET_KEY = os.environ.get('SECRET_KEY')

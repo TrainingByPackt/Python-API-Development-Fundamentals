@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "9db9b13b-f1bf-4fef-976d-0c64360fe477",
+		"name": "SmileCook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "RecipeList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM3MjM0ODMsIm5iZiI6MTU3MzcyMzQ4MywianRpIjoiNzczZDkzMjYtYTkxOS00OGU5LWFjZTYtNzIxNTg1NmQyMjYzIiwiZXhwIjoxNTczNzI0MzgzLCJpZGVudGl0eSI6NCwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.Dz5XnYN88V6XHjnMKMf3Xy91GbkhOC-8kYim9SJMy4o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\": \"Blueberry Smoothie\", \n    \"description\": \"This is a lovely Blueberry Smoothie\",\n    \"num_of_servings\": 2,\n    \"cook_time\": 10,\n    \"directions\": \"This is how you make it\"\n} "
+						},
+						"url": {
+							"raw": "{{url}}/recipes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecipeList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/recipes?per_page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"recipes"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "cook_time",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "asc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecipePublish",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NDc5NzcsIm5iZiI6MTU3MzU0Nzk3NywianRpIjoiMTkwMDc2ODItNDFiYy00NGI0LWI1NjktM2M4MGJjZWE1ZGQwIiwiZXhwIjoxNTczNTQ4ODc3LCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.LoK3b63GihYQp3A3-zKw4-yEMOqQxmjm-kDfYe0plkU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/recipes/4/publish",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"recipes",
+								"4",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM5NzQ2MzYsIm5iZiI6MTU3Mzk3NDYzNiwianRpIjoiYmZlOGQ5NzAtNmM4YS00Y2U2LTkzNTMtOTQ4MjFjMTlmODRjIiwiZXhwIjoxNTczOTc1NTM2LCJpZGVudGl0eSI6NCwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.egTb1MwBAwprbol7ABZBRDViRL5jk3f7GVqb4msNadg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n\t\"num_of_servings\": 10,\n\t\"cook_time\": 100\n}  "
+						},
+						"url": {
+							"raw": "{{url}}/recipes/15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"recipes",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM3MjM0ODMsIm5iZiI6MTU3MzcyMzQ4MywianRpIjoiNzczZDkzMjYtYTkxOS00OGU5LWFjZTYtNzIxNTg1NmQyMjYzIiwiZXhwIjoxNTczNzI0MzgzLCJpZGVudGl0eSI6NCwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.Dz5XnYN88V6XHjnMKMf3Xy91GbkhOC-8kYim9SJMy4o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/recipes/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"recipes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/recipes/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"recipes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecipePublish",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NTY2OTEsIm5iZiI6MTU3MzU1NjY5MSwianRpIjoiODIyMTc0ZWYtYjlkOS00YTFiLWE5MTQtNWEwODEzYmRiNjg4IiwiZXhwIjoxNTczNTU3NTkxLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.yEMExS0LkYsmkh-UFJvBw7A-1hXWH40ggMcE61NY_pA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/recipes/3/publish",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"recipes",
+								"3",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RecipeCoverUpload",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM3MjM0ODMsIm5iZiI6MTU3MzcyMzQ4MywianRpIjoiNzczZDkzMjYtYTkxOS00OGU5LWFjZTYtNzIxNTg1NmQyMjYzIiwiZXhwIjoxNTczNzI0MzgzLCJpZGVudGl0eSI6NCwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.Dz5XnYN88V6XHjnMKMf3Xy91GbkhOC-8kYim9SJMy4o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cover",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/recipes/5/cover",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"recipes",
+								"5",
+								"cover"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"username\": \"jack\", \n    \"email\": \"smilecook.restful@gmail.com\", \n    \"password\": \"WkQad19\" \n} "
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjgxODU4MTYsIm5iZiI6MTU2ODE4NTgxNiwianRpIjoiZmU1OTUwMDgtYWNhMi00ZmJkLWE1ZjgtZmI2ZmZkYmQ0ZWQ3IiwiZXhwIjoxNTY4MTg2NzE2LCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.6B_QB8Q2eDJgm3EIgtYWoHbZe9nKHgn4Zo5AdCY8qrk",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users/john",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"john"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"warning": "Key contains invalid whitespace characters.",
+								"key": "Authorization ",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMzNTY4ODIsIm5iZiI6MTU3MzM1Njg4MiwianRpIjoiMjZiYzg2ZGMtMTYzNy00MWU3LTk0YzItNDg2MTM3ZWM1N2NiIiwiZXhwIjoxNTczMzU3NzgyLCJpZGVudGl0eSI6MywiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.HYMmZMyDSoGh_m5UGCugicLPfhO8jIl_LtY7a-PPgrA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserRecipeList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM1NDkyODAsIm5iZiI6MTU3MzU0OTI4MCwianRpIjoiOWNmNzU5OWItNjJmZS00MTkyLThmM2ItNmUyYmRjZDEwYzE2IiwiZXhwIjoxNTczNTUwMTgwLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ._Dcrg7wyGUGxsHHagDwZLyPinZ1zSPU52QKJ-0gnu0o",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users/john/recipes?per_page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"john",
+								"recipes"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserAvatarUpload",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzM3MjIzNjQsIm5iZiI6MTU3MzcyMjM2NCwianRpIjoiYWU2MzFjNWYtNjMzZC00ZjVjLTliYjQtNDdjYzkxNGU2Zjc3IiwiZXhwIjoxNTczNzIzMjY0LCJpZGVudGl0eSI6NCwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.MYhNUO5E9gaphhaOwGBbyJ8tj5hPvgWM9fks3Xfq4no",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/users/avatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"email\": \"smilecook.api@gmail.com\", \n    \"password\": \"Kwq2z5\" \n} "
+						},
+						"url": {
+							"raw": "{{url}}/token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NjgxODY0MzQsIm5iZiI6MTU2ODE4NjQzNCwianRpIjoiZThlMGM2OTgtYjY5OS00MTg0LWFiYzItMThjMTdkYjA4NmNkIiwiZXhwIjoxNTcwNzc4NDM0LCJpZGVudGl0eSI6MywidHlwZSI6InJlZnJlc2gifQ.XIXEex13Er28h2SNeQSAwb2ubGVxd7au-JLxjX_tXpk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzMzNzIwNDIsIm5iZiI6MTU3MzM3MjA0MiwianRpIjoiNzBmOGUwOTYtOWQ4MS00OTAxLTgwMGMtOGNmNTIyODllZDg5IiwiZXhwIjoxNTczMzcyOTQyLCJpZGVudGl0eSI6MywiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.Q7POtXfelopK4Q060GCVH26Hb_kDynj_TBwBxncf_-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/revoke",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

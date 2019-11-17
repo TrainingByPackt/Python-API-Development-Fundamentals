@@ -1,0 +1,11 @@
+git --version
+
+heroku login
+
+git init
+heroku git:remote -a your-heroku-app
+
+git add .
+git commit -am "first commit"
+git push heroku master
+

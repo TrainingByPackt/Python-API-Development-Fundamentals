@@ -2,16 +2,6 @@ from extensions import db
 
 from sqlalchemy import asc, desc, or_
 
-recipe_list = []
-
-
-def get_last_id():
-    if recipe_list:
-        last_recipe = recipe_list[-1]
-    else:
-        return 1
-    return last_recipe.id + 1
-
 
 class Recipe(db.Model):
     __tablename__ = 'recipe'

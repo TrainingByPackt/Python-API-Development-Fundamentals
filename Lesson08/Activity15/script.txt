@@ -1,0 +1,5 @@
+http POST localhost:5000/recipes "Authorization: Bearer {token}" name="Sweet Potato Casserole" description="This is a lovely Sweet Potato Casserole" num_of_servings=12 cook_time=60 ingredients="4 cups sweet potato, 1/2 cup white sugar, 2 eggs, 1/2 cup milk" directions="This is how you make it"
+http POST localhost:5000/recipes "Authorization: Bearer {token}" name="Pesto Pizza" description="This is a lovely Pesto Pizza" num_of_servings=6 cook_time=20 ingredients="1 pre-baked pizza crust, 1/2 cup pesto, 1 ripe tomato" directions="This is how you make it"
+
+http PUT localhost:5000/recipes/14/publish "Authorization: Bearer {token}"
+http PUT localhost:5000/recipes/15/publish "Authorization: Bearer {token}"

@@ -38,7 +38,7 @@ def register_extensions(app):
 
     @limiter.request_filter
     def ip_whitelist():
-        return request.remote_addr == "127.0.0.1"
+        return request.remote_addr == '127.0.0.1'
 
     @app.before_request
     def before_request():

@@ -5,20 +5,20 @@
 
 
 # Python-API-Development-Fundamentals
-Python is a flexible language that can do much more than just script development. By knowing how the Python RESTful APIs work, you can build a powerful backend for web application and mobile applications using Python.
+Python is a flexible language that can do much more than just script development. By knowing how the Python RESTful APIs work, you can build a powerful backend for web applications and mobile applications using Python.
 
-You'll take your first steps by building a simple API and learning how the frontend web interface can communicate with the backend. You'll also learn how to serialize and deserialize objects using the marshmallow library. Then, you'll learn how to authenticate and authorize users using Flask-JWT. Apart from all this, you'll also learn how to enhance your APIs by adding useful features, such as email, image upload, searching, and pagination. You'll wrap up the whole course by deploying the APIs to cloud.
+You'll take your first steps by building a simple API and learning how the frontend web interface can communicate with the backend. You'll also learn how to serialize and deserialize objects using the marshmallow library. Then, you'll learn how to authenticate and authorize users using Flask-JWT. Apart from all this, you'll also learn how to enhance your APIs by adding useful features, such as email, image upload, searching, and pagination. You'll wrap up the whole course by deploying the APIs to the cloud.
 
 By the end of this course, you'll have the confidence and skill to leverage the power of RESTful APIs and Python to build efficient web applications.
 
 ## What you will learn
-* Understand the concept of RESTful API
-* Build a Restful API using Flask and Flask-Restful extension
-* Manipulate the database using Flask-SQLAlchemy and Flask-Migrate
-* Send out plaintext and HTML format email using the Mailgun API
-* Implement the pagination function using Flask-SQLAlchemy
-* Use cache to improve API performance and efficiently get the latest information
-* Deploy an application to Heroku and test it using Postman
+*	Understand the concept of a RESTful API
+*	Build a RESTful API using Flask and the Flask-Restful extension
+*	Manipulate a database using Flask-SQLAlchemy and Flask-Migrate
+*	Send out plaintext and HTML format emails using the Mailgun API
+*	Implement the pagination function using Flask-SQLAlchemy
+*	Use cache to improve API performance and efficiently obtain the latest information
+*	Deploy an application to Heroku and test it using Postman
 
 ### The examples of this title has been implemented in the Windows/MAC/Linux operating system.
 

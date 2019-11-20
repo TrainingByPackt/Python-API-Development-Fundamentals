@@ -27,3 +27,6 @@ We also recommend that you have the following software installed in advance:
 * **OS**: Windows 7 SP1 64-bit, Windows 8.1 64-bit or Windows 10 64-bit, Ubuntu Linux, or the latest version of OS X
 * **Browser**: Google Chrome/Mozilla Firefox Latest Version
 * Python 3.4+ (latest is Python 3.8) installed (from https://python.org)
+* Pycharm (https://www.jetbrains.com/pycharm/download/)
+* Postman (https://www.getpostman.com/downloads/)
+* Postgres Database (http://www.postgresql.org)

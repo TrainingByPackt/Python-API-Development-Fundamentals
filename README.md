@@ -5,7 +5,7 @@
 
 
 # Python API Development Fundamentals
-Python is a flexible language that can do much more than just script development. By knowing how the Python RESTful APIs work, you can build a powerful backend for web applications and mobile applications using Python.
+Python is a flexible language that can be used for much more than just script development. By knowing how the Python RESTful APIs work, you can build a powerful backend for web applications and mobile applications using Python. 
 
 You'll take your first steps by building a simple API and learning how the frontend web interface can communicate with the backend. You'll also learn how to serialize and deserialize objects using the marshmallow library. Then, you'll learn how to authenticate and authorize users using Flask-JWT. Apart from all this, you'll also learn how to enhance your APIs by adding useful features, such as email, image upload, searching, and pagination. You'll wrap up the whole course by deploying the APIs to the cloud.
 

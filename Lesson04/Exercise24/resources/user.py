@@ -1,6 +1,7 @@
 from flask import request
 from flask_restful import Resource
 from flask_jwt_extended import jwt_optional, get_jwt_identity
+### If you use updated version of flask_jwt_extended, you must use jwt_required and modify the decorator too. ###
 from http import HTTPStatus
 
 from utils import hash_password
@@ -43,6 +44,7 @@ class UserListResource(Resource):
 class UserResource(Resource):
 
     @jwt_optional
+    ### For new versions, decorator should be @jwt_required(optional=True) ###
     def get(self, username):
 
         user = User.get_by_username(username=username)
